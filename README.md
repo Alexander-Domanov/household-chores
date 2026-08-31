@@ -63,6 +63,26 @@ household-chores/
 └── AGENTS.md                # context for AI coding agents
 ```
 
+## How it was built (AI-native workflow)
+
+This project follows the AI-native development workflow from
+[AI Dev Tools Zoomcamp](https://datatalks.club/) Part 1:
+spec-driven development, a groomed backlog, and role separation between
+PM, engineer and QA agents.
+
+1. **Spec first** — `_docs/plan.md` defines scope and tech stack before any code.
+2. **Backlog** — `backlog.md` decomposes the spec into six small tasks, each
+   doable in one session.
+3. **Context engineering** — `AGENTS.md` gives any coding agent (Codex,
+   OpenCode, Claude Code) the commands, rules and a map of the documents.
+4. **Role separation** — the PM grooms a task into checkable acceptance
+   criteria (`_docs/team/pm.md`, `_docs/task-template.md`), the engineer
+   implements it (`_docs/team/software-engineer.md`), and QA verifies it
+   against the criteria, outputting PASS or FAIL (`_docs/team/qa-engineer.md`).
+   The orchestrator lifecycle is described in `_docs/process.md`.
+5. **Verification** — every task is covered by tests (`uv run pytest`) and
+   checked against the running app.
+
 ## Docs
 
 - `_docs/plan.md` — product specification
