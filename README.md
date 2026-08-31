@@ -1,5 +1,9 @@
 # Household Chores Manager
 
+[![Tests](https://github.com/Alexander-Domanov/household-chores/actions/workflows/tests.yml/badge.svg)](https://github.com/Alexander-Domanov/household-chores/actions/workflows/tests.yml)
+[![Python](https://img.shields.io/badge/python-3.13-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 MVP project for [AI Dev Tools Zoomcamp 2026](https://datatalks.club/) Homework 1.
 
 A simple web app for a household to track chores: anyone can add a task,
@@ -89,3 +93,7 @@ PM, engineer and QA agents.
 - `backlog.md` — the backlog (all 6 tasks are implemented)
 - `AGENTS.md` — commands and rules for AI coding agents
 - `_docs/process.md` — workflow: PM grooms → engineer implements → QA verifies
+
+## License
+
+MIT — see [LICENSE](LICENSE).
