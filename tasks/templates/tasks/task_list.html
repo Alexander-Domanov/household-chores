@@ -1,0 +1,43 @@
+{% extends "tasks/base.html" %}
+{% block title %}Tasks - Household Chores{% endblock %}
+{% block content %}
+<h1>Tasks</h1>
+{% if tasks %}
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Assigned to</th>
+            <th>Status</th>
+            <th>Created</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>{{ task.description }}</td>
+            <td>
+                {% if task.assigned_to %}{{ task.assigned_to }}{% else %}<em>Unassigned</em>{% endif %}
+            </td>
+            <td><span class="badge badge-{{ task.status }}">{{ task.get_status_display }}</span></td>
+            <td>{{ task.created_at|date:"Y-m-d H:i" }}</td>
+            <td>
+                <a href="{% url 'task_assign' task.pk %}">Assign</a>
+                {% if task.status != "done" %}
+                <form method="post" action="{% url 'task_complete' task.pk %}" style="display:inline">
+                    {% csrf_token %}
+                    <button type="submit">Complete</button>
+                </form>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No tasks yet. <a href="{% url 'task_create' %}">Add the first one</a>.</p>
+{% endif %}
+{% endblock %}

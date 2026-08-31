@@ -1,0 +1,11 @@
+{% extends "tasks/base.html" %}
+{% block title %}Assign task - Household Chores{% endblock %}
+{% block content %}
+<h1>Assign "{{ task.title }}"</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Assign</button>
+</form>
+<p><a href="{% url 'task_list' %}">Back to list</a></p>
+{% endblock %}
