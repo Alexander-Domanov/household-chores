@@ -70,7 +70,7 @@ household-chores/
 ## How it was built (AI-native workflow)
 
 This project follows the AI-native development workflow from
-[AI Dev Tools Zoomcamp](https://datatalks.club/) Part 1:
+[AI Dev Tools Zoomcamp](https://github.com/DataTalksClub/ai-dev-tools-zoomcamp) Part 1:
 spec-driven development, a groomed backlog, and role separation between
 PM, engineer and QA agents.
 
