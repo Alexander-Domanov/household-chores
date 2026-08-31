@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.13-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-MVP project for [AI Dev Tools Zoomcamp 2026](https://datatalks.club/) Homework 1.
+MVP project for [AI Dev Tools Zoomcamp 2026](https://github.com/DataTalksClub/ai-dev-tools-zoomcamp) Homework 1.
 
 A simple web app for a household to track chores: anyone can add a task,
 assign it to a household member, and mark it as done.
